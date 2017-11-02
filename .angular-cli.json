@@ -1,7 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "stencil-client"
+    "name": "stencil-client",
+    "ejected": true
   },
   "apps": [
     {
@@ -55,15 +56,15 @@
   },
   "defaults": {
     "styleExt": "css",
+    "class": {
+      "spec": false
+    },
     "component": {
       "spec": false,
       "inlineStyle": true,
       "inlineTemplate": true
     },
     "directive": {
-      "spec": false
-    },
-    "class": {
       "spec": false
     },
     "guard": {
@@ -77,6 +78,6 @@
     },
     "service": {
       "spec": false
-    } 
+    }
   }
 }
