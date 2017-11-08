@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,17 +7,15 @@ import { Component } from '@angular/core';
     <h1>
       Welcome to {{title}}!!
     </h1>
-    <button-dropdown title="stencil">
-      <ul>
-        <li>The content in the slot!</li>
-        <li>The content in the slot!</li>
-        <li>The content in the slot!</li>
-        <li>The content in the slot!</li>
-        </ul>
-    </button-dropdown>
+    <button (click)="loadLazy()">Load Lazy</button>
+    <router-outlet></router-outlet>
   `,
   styles: []
 })
 export class AppComponent {
   title = 'app';
+  constructor(private router: Router){}
+  public loadLazy() {
+    this.router.navigate(['lazy']);
+  }
 }
